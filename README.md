@@ -65,8 +65,21 @@ Using a MAX1044 voltage converter IC, the circuit creates various voltages for u
 
 ## Input Buffer
 The input buffer listed here converts the high-impedance signal from your guitar into a low impedance signal for increased signal integrity and less high end tone loss. This buffer has uniatry gain with the main focus being a clear guitar tone even when the pedal is bypassed.
+
+### Frequency Cutoff
+The 1Meg Resistor and 0.1u capacitor form a high pass filter and can be calcuated with the f = 1 / 2piRC formula.
+f = 1 / 2pi(1Meg)(0.1u) = 1.59 Hz
+
+This input buffer having a cutoff frequency of 1.59Hz does not audibly affect the signal and preserves the original guitar signal without attentuation.
+
+### Input Impedance
+Due to the JFET network inside the TL072, the input impedance is on the order of 10^12 ohms and will not affect the guitar signal all that much. With 1Meg input impedance and above, you don't have to worry about tone sucking.
+Z = 10k + (1Meg // TL072 Z) = 1Meg
 ![image](https://github.com/user-attachments/assets/d3df56b4-1f56-47c8-8865-bbab273afe42)
 
+## Clipping Stage
+![image](https://github.com/user-attachments/assets/deb9e58f-ed97-4d40-b9ae-6b544fe40e7d)
+![image](https://github.com/user-attachments/assets/d961c995-8917-4ca2-a45d-1c56d5e790d9)
 
 ## Switchable Diode Mod
 To add versitility, the switchable diode mod is one that I came up with to add more high end distortion to the guitar signal. When switched on, siicon switching diodes are added in series to the germanium diodes to raise the forward voltage needed to distort from 0.3V to 1V. This increases headroom, output, and increases high end tone for a less fuzz like tone. 
