@@ -1,1 +1,1 @@
-# Modified-Klon-Centaur-Pedal
+# Modified Klon Centaur Pedal
