@@ -55,4 +55,23 @@
 - 2x TL072 OP Amp
 - 1x MAX1044 Voltage Converter
 
+# Schematic and Analysis
+## Original Circuit Diagram
+![Klon Centaur Original (1)](https://github.com/user-attachments/assets/4ae05caf-6b1b-4a4b-afdf-e33d96f9290f)
+
+## Power Supply
+Using a MAX1044 voltage converter IC, the circuit creates various voltages for use with the TL072 OP amps. The power supply uses the simple negative converter for -8.6V, positive multiplier for +16.2V, and voltage divider for +4.5V. The voltage converter ensures a clean signal for a low noise floor with the pedal. 
+![image](https://github.com/user-attachments/assets/0b16ffa6-e71e-41d9-870d-61bf35e72e69)
+
+## Input Buffer
+The input buffer listed here converts the high-impedance signal from your guitar into a low impedance signal for increased signal integrity and less high end tone loss. This buffer has uniatry gain with the main focus being a clear guitar tone even when the pedal is bypassed.
+![image](https://github.com/user-attachments/assets/d3df56b4-1f56-47c8-8865-bbab273afe42)
+
+
+## Switchable Diode Mod
+To add versitility, the switchable diode mod is one that I came up with to add more high end distortion to the guitar signal. When switched on, siicon switching diodes are added in series to the germanium diodes to raise the forward voltage needed to distort from 0.3V to 1V. This increases headroom, output, and increases high end tone for a less fuzz like tone. 
+![image](https://github.com/user-attachments/assets/12dee5a7-917e-42b8-baec-48a709f3679d)
+
+
+
 
